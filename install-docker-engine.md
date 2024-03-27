@@ -1,4 +1,3 @@
-## Copilot
 To install Docker on your Ubuntu system, you can follow these steps:
 - Update your existing list of packages:
 
