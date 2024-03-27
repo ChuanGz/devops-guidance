@@ -1,0 +1,3 @@
+sonar.jdbc.url=jdbc:sqlserver://172.188.112.153;databaseName=sonarDb
+sonar.jdbc.username=sonar
+sonar.jdbc.password=Aa@123456
