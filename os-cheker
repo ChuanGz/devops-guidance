@@ -20,3 +20,8 @@ sonarqube:latest
 
 
 default admin for sonar: admin/admin
+
+
+config gitHub Webhook
+
+http://ubuntu2304.southeastasia.cloudapp.azure.com:8080/github-webhook/
