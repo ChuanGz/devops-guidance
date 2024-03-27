@@ -1,5 +1,7 @@
 VM Ubuntu 2304 installation
 
+1 - jenkins container
+docker run -p 8080:8080 -p 50000:50000 -d -v /var/run/docker.sock:/var/run/docker.sock -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 
-2 ms sql server 2019
-sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Aa@123456' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+2 - ms sql server 2019
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Aa@123456' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
