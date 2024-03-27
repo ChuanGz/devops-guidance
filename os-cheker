@@ -4,4 +4,15 @@ VM Ubuntu 2304 installation
 docker run --name jenkins -p 8080:8080 -p 50000:50000 -d -v /var/run/docker.sock:/var/run/docker.sock -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 
 2 - ms sql server 2019 (port 1433)
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Aa@123456' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+docker run --name mssqlsv -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Aa@123456' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+
+3 - sonarqube (name sonarqube, port 9090)
+docker run -d --name sonarqube -p 9000:9000 \
+-e SONAR_JDBC_URL="jdbc:sqlserver://172.188.112.153:1433;databaseName=sonarDb;encrypt=true;trustServerCertificate=true" \
+-e SONAR_JDBC_USERNAME="sa" \
+-e SONAR_JDBC_PASSWORD="Aa@123456" \
+-e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE="true" \
+-v sonarqube_data:/opt/sonarqube/data \
+-v sonarqube_extensions:/opt/sonarqube/extensions \
+-v sonarqube_logs:/opt/sonarqube/logs \
+sonarqube:latest
