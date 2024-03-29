@@ -18,3 +18,14 @@ dotnet --version
 
 local check jenkins sonar token
 squ_a3d8d804b7f5d40bcff15c485fb0ae92b7f432e8
+
+root@e3fcf4a6ee61:/# cat etc/os-release
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
