@@ -1,0 +1,3 @@
+check jenkins
+
+docker exec -it jenkins /bin/bash
