@@ -14,3 +14,7 @@ apt-get install libicu-dev
 
 4 - verify in container environment
 dotnet --version
+
+
+local check jenkins sonar token
+squ_a3d8d804b7f5d40bcff15c485fb0ae92b7f432e8
