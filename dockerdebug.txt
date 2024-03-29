@@ -1,3 +1,12 @@
 check jenkins
 
 docker exec -it jenkins /bin/bash
+
+1 - change user login to root container:
+docker exec -it -u root jenkins bash
+
+2 - install packages:
+apt-get update
+apt-get install libicu-dev
+
+
