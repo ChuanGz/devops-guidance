@@ -9,4 +9,8 @@ docker exec -it -u root jenkins bash
 apt-get update
 apt-get install libicu-dev
 
+3 - after instaill .net sdk, export only path part to execution env like:
+ export PATH=$PATH:/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/dotnet_8_linux
 
+4 - verify in container environment
+dotnet --version
